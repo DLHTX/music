@@ -18,7 +18,6 @@ body{
     display: none;
 }
 .background{
-
     background:url("back.jpg") center center no-repeat ;
     background-size:cover;
     position: absolute;
@@ -157,18 +156,39 @@ footer .current-time{
     top: 0;
 }
 footer .lyic{
+     height: 6vh;
+     width: 70vh;
+     border-radius: .5vh;
+     transition: all 1s;
+     position: absolute;
+     left: calc(50% - 35vh);
+     top: -7vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2.3vh;
+ }
+
+
+body .lyic2{
     height: 6vh;
     width: 70vh;
     border-radius: .5vh;
-    transition: all .1s;
+    transition: all 1s;
     position: absolute;
     left: calc(50% - 35vh);
-    top: -7vh;
+    top: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.3vh;
+    font-size: 4vh;
+    opacity: 0;
 }
+footer .lyic:hover{
+    background-color: rgba(255,255,255,0.1);
+    transition: all 1s;
+}
+
 main .icon-box{
     height: 40vh;
     width: 100vh;

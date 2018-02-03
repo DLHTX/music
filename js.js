@@ -145,6 +145,7 @@ var app = {
         this.audio = new Audio()
         this.audio.autoplay = true
         this.channelid = 'public_tuijian_rege'
+        this.ismove=false
 
         EventCenter.fire('select',{
             channelId : 'public_tuijian_rege'
@@ -209,6 +210,31 @@ var app = {
 
 
 
+
+
+             $(document).on('mousemove',function () {
+                 console.log('move')
+                 this.ismove = true
+                 if(this.ismove == true){
+                     clearInterval(interC)
+                     this.ismove = false
+                     _this.In()
+                 }
+                 if(this.ismove == false){
+                     interC = setInterval(function () {
+                         console.log('11')
+                         _this.Out()
+                     },5000)
+                 }
+
+             })
+
+
+            if(this.ismove == false){
+                var interC = setInterval(function () {
+                   _this.Out()
+                },5000)
+            }
     },
     loadMusic:function () {
         var _this = this
@@ -270,6 +296,7 @@ var app = {
         var line = this.lyric[min + ':' + sec]
             if(line){
                 $('footer .lyic').text(this.lyric[min + ':' + sec]).boomText()
+                $('body .lyic2').text(this.lyric[min + ':' + sec]).boomText()
             }
 
     },
@@ -304,7 +331,30 @@ var app = {
 
 
 
-    }
+    },
+    In:function () {
+        $('footer').removeClass('animated fadeOut').addClass('animated fadeIn')
+        $('body .lyic2').css({
+            opacity:0
+        }).removeClass('animated fadeIn').addClass('animated fadeOut')
+        $('main .icon-box').removeClass('animated fadeIn').addClass('animated bounceIn').css({
+            width:100 + 'vh',
+            left: 'calc(50% - 50vh)'
+        })
+
+    },
+    Out :function () {
+        $('footer').removeClass('animated fadeIn').addClass('animated fadeOut')
+
+
+        $('body .lyic2').css({
+            opacity:1
+        }).removeClass('animated fadeOut').addClass('animated fadeIn')
+        $('main .icon-box').removeClass('animated bounceIn').addClass('animated fadeIn').css({
+            width:100+'%',
+            left:0
+        })
+    },
 
     
 }
