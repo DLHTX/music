@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+    transition: all .4s;
+}
+html,body,head, .music-box{
+    height: 100%;
+    overflow: hidden;
+
+
+}
+body{
+    position: relative;
+}
+.hover{
+    display: none;
+}
+.background{
+
+    background:url("back.jpg") center center no-repeat ;
+    background-size:cover;
+    position: absolute;
+    left: -10px;
+    top:-10px;
+    bottom: -10px;
+    right: -10px;
+    filter: blur(0px);
+    z-index: -1;
+}
+
+main{
+    height: calc(100% - 15vh);
+    text-align: center;
+    position: relative;
+}
+footer{
+    height: 15vh;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    padding: 3vh;
+    position: relative;
+}
+footer .songer-detail{
+    height: 10vh;
+}
+footer .songer-img{
+    height: 10vh;
+    width: 10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .aixin{
+    font-size: 3vh;
+    transition: all .4s;
+    cursor: pointer;
+}
+.color{
+    color:red;
+}
+
+main .song-title{
+    padding: 1vh 1.5vh;
+    background-color: #f83938;
+    border-radius: .2vh;
+    color:white;
+    font-size: 1.5vh;
+    margin:2vh 0 1vh 2vh;
+    display: inline-block;
+}
+
+.song-name{
+    font-size: 2.5vh;
+    margin:1vh 0 1vh 2vh;
+}
+.art-name{
+    color:#a4a6a7;
+    margin:0 0 1vh 2vh;
+    font-size: 2vh;
+}
+.icon{
+    position: absolute;
+    left: calc(50% - 10vh);
+    top:calc(50% - 3vh);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+footer .icon .iconfont:hover{
+    color:#f83938;
+    transition: all .4s;
+}
+footer .icon .iconfont{
+    font-size: 4vh;
+    transition: all .4s;
+    cursor: pointer;
+
+}
+footer .icon .icon-play{
+    font-size: 6vh;
+    margin: 0 3vh 0vh 3vh;
+}
+footer .icon .icon-stop{
+    font-size: 6vh;
+    margin: 0 3vh 0vh 3vh;
+}
+
+footer .icon2{
+    position: absolute;
+    left:80%;
+    top:calc(50% - 1.5vh);
+}
+footer .icon2 .iconfont{
+    font-size: 3vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+}
+footer .icon2 .iconfont span{
+     width: 10vh;
+     border-radius: 5vh;
+     height: 1vh;
+     background-color: rgba(255,255,255,0.2);
+     margin-left: 1vh;
+    position: relative;
+    cursor: pointer;
+
+ }
+footer .icon2 .iconfont .volume{
+    width: 5vh;
+    border-radius: 5vh;
+    height: 1vh;
+    background-color: #f83938;
+    position: absolute;
+    left: -10%;
+    top: 0;
+}
+footer .progress-time{
+    height: .5vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.1);
+    position: absolute;
+    left: 0;
+    top: -.5vh;
+    cursor:pointer;
+}
+footer .current-time{
+    height: .5vh;
+    width: 0;
+    background-color: #f83938;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+footer .lyic{
+    height: 6vh;
+    width: 70vh;
+    border-radius: .5vh;
+    transition: all .1s;
+    position: absolute;
+    left: calc(50% - 35vh);
+    top: -7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3vh;
+}
+main .icon-box{
+    height: 40vh;
+    width: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 0.5vh;
+    position: absolute;
+    top: calc(50% - 20vh);
+    left: calc(50% - 50vh);
+    display: flex;
+    align-items: center;
+
+}
+main .img-box2{
+    height: 40vh;
+    border-radius: 0.5vh;
+    position: absolute;
+    top: calc(50% - 20vh);
+    left: calc(50% - 50vh);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.red{
+    color:#f83938;
+}
+.box-show{
+    box-shadow : 0px 2px 20px 10px rgba(0,0,0,0.4)
+}
+.disable{
+    color:#4D4D4D;
+}
+main .img-box3{
+     height: 40vh;
+     width: 100vh;
+     border-radius: 0.5vh;
+     position: absolute;
+     top: calc(50% - 20vh);
+     left: calc(50% - 50vh);
+     display: flex;
+     align-items: center;
+     overflow: hidden;
+
+ }
+main .icon-next{
+    position: absolute;
+    font-size: 10vh;
+    top:calc(50% - 5vh);
+    left: 105%;
+    color:rgba(0,0,0,0.3);
+
+}
+.trans{
+    animation:circle 4s infinite linear;
+}
+
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+main .icon-last{
+    position: absolute;
+    font-size: 10vh;
+    top:calc(50% - 5vh);
+    left:-14%;
+    color:rgba(0,0,0,0.3);
+}
+
+main .img-box2:hover main .img-box .iconfont{
+     opacity: 1;
+ }
+main .iconfont:hover{
+    color:white;
+}
+main .iconfont{
+    opacity: 1;
+    cursor: pointer;
+    z-index: 1;
+}
+main .img{
+    height: 20vh;
+    width: 20vh;
+    background: url("img.jpg");
+    border-radius: 50%;
+
+
+}
+
+main .box span{
+    font-size: 1.5vh;
+    margin-top: 1vh;
+    display: block;
+}
+main .box{
+    height: 22vh;
+    width: 20vh;
+    margin:1vh 2.5vh;
+    font-size: 1vh;
+
+}
+
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
