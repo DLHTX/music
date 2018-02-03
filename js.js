@@ -289,6 +289,10 @@ var app = {
         $('footer .current-time').css({
             width: this.audio.currentTime/this.audio.duration * 100 + '%'
         })
+        $('body .current-time1').css({
+            width: this.audio.currentTime/this.audio.duration * 100 + '%'
+        })
+
 
         var min = '0' + Math.floor(this.audio.currentTime/60)
         var sec = Math.floor(this.audio.currentTime)%60 + ''
@@ -337,10 +341,11 @@ var app = {
         $('body .lyic2').css({
             opacity:0
         }).removeClass('animated fadeIn').addClass('animated fadeOut')
-        $('main .icon-box').removeClass('animated fadeIn').addClass('animated bounceIn').css({
+        $('main .icon-box').removeClass('animated fadeIn').addClass('animated bounce').css({
             width:100 + 'vh',
             left: 'calc(50% - 50vh)'
         })
+        $('body .progress-time1').removeClass('animated fadeIn').addClass('animated fadeOut')
 
     },
     Out :function () {
@@ -350,10 +355,11 @@ var app = {
         $('body .lyic2').css({
             opacity:1
         }).removeClass('animated fadeOut').addClass('animated fadeIn')
-        $('main .icon-box').removeClass('animated bounceIn').addClass('animated fadeIn').css({
+        $('main .icon-box').removeClass('animated bounce').addClass('animated fadeIn').css({
             width:100+'%',
             left:0
         })
+        $('body .progress-time1').removeClass('animated fadeOut').addClass('animated fadeIn')
     },
 
     
