@@ -176,6 +176,10 @@ var app = {
             _this.loadMusic()
         })
 
+        $('footer .icon-houtui').on('click',function () {
+            _this.loadMusic()
+        })
+
         document.querySelector('footer .progress-time').addEventListener('click',function (e) {
             var per = e.offsetX/$('footer .progress-time').width()
             console.log(per)
