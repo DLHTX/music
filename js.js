@@ -246,8 +246,10 @@ var app = {
                 channel:_this.channelid
             }
         }).done(function (ret) {
+            if(ret.song[0].title ===null){
+                return _this.loadmusic()
+            }
             _this.setMusic(ret.song[0])
-
         }).fail(function () {
             _this.loadMusic()
             console.log('404')
