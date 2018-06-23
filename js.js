@@ -247,7 +247,7 @@ var app = {
             }
         }).done(function (ret) {
             if(ret.song[0].title ===null){
-                return _this.loadmusic()
+                return _this.loadMusic()
             }
             _this.setMusic(ret.song[0])
         }).fail(function () {
